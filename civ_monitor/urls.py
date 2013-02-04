@@ -6,6 +6,8 @@ from django.views.generic.base import TemplateView
 from django.contrib import admin
 admin.autodiscover()
 
+handler500 = "utils.views.server_error"
+
 class HomePageView(TemplateView):
     template_name = "homepage.html"
 

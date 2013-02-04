@@ -132,11 +132,13 @@ THIRD_PARTY_APPS = [
     # theme
     'south',
     "pinax_theme_foundation",
+    "django_extensions",
 
 ]
 
 LOCAL_APPS = [
     'utils',
+    'publications',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
