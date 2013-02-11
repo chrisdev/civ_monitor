@@ -6,6 +6,7 @@ from django.db import models
 class Monthly(models.Model):
 
     dateix = models.DateField(unique=True)
+    legacy_id = models.IntegerField(null=True, blank=True, editable=False)
 
     def __unicode__(self):
         return u'{}'.format(self.dateix.strftime('%Y-%b'))
@@ -26,7 +27,7 @@ class Publication(models.Model):
     )
     data_status = models.CharField(choices=CHOICES, max_length=2)
     date_stamp = models.DateField(auto_now_add=True)
-    publication_date = models.ForeignKey(
+    data_collection_period = models.ForeignKey(
         Monthly,
         unique=True,
         limit_choices_to={'dateix__gte': '2007-12-31'}
@@ -35,11 +36,11 @@ class Publication(models.Model):
     def __unicode__(self):
         return u'Satus %s Date %s' % (
             self.data_status,
-            self.publication_date.dateix.strftime('%Y-%b')
+            self.data_collection_period.dateix.strftime('%Y-%b')
         )
 
     class Meta:
-        ordering = ['-publication_date']
+        ordering = ['-data_collection_period']
         verbose_name = 'Last valid date for Publication'
         verbose_name_plural = 'Last valid date for Publication'
 
