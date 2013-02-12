@@ -8,3 +8,5 @@ pinax-theme-foundation
 psycopg2==2.4.6
 django-extensions==1.0.3
 python-dateutil==2.1
+django-countries==1.5
+django-admin-tools==0.4.1

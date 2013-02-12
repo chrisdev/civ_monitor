@@ -70,6 +70,8 @@ STATIC_ROOT = join(DJANGO_ROOT, "site_media", "static")
 # Example: "http://media.lawrence.com"
 STATIC_URL = "/site_media/static/"
 
+ADMIN_MEDIA_PREFIX = join(STATIC_URL, "admin/")
+
 # Additional directories which hold static files
 STATICFILES_DIRS = [
     join(DJANGO_ROOT, "static"),
@@ -118,7 +120,6 @@ TEMPLATE_CONTEXT_PROCESSORS = [
 
 DJANGO_APPS = [
     # Django
-    "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -126,6 +127,12 @@ DJANGO_APPS = [
     "django.contrib.messages",
     "django.contrib.humanize",
     'django.contrib.staticfiles',
+    #admin too here to overwrite templates
+    'admin_tools',
+    'admin_tools.theming',
+    'admin_tools.menu',
+    'admin_tools.dashboard',
+    "django.contrib.admin",
 ]
 
 THIRD_PARTY_APPS = [
@@ -133,12 +140,14 @@ THIRD_PARTY_APPS = [
     'south',
     "pinax_theme_foundation",
     "django_extensions",
+    'django_countries',
 
 ]
 
 LOCAL_APPS = [
     'utils',
     'publications',
+    'funds',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -147,6 +156,14 @@ FIXTURE_DIRS = [
     join(DJANGO_ROOT, "fixtures"),
 ]
 
+######## Admin Menu ###########
+
+ADMIN_TOOLS_MENU = 'civ_monitor.menu.CustomMenu'
+ADMIN_TOOLS_INDEX_DASHBOARD = 'civ_monitor.dashboard.CIVIndexDashboard'
+ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'civ_monitor.dashboard.CIVAppIndexDashboard'
+
+
+###############################
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

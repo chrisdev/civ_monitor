@@ -16,5 +16,15 @@ urlpatterns = patterns("",
         HomePageView.as_view(),
         name="home"),
     url(r"^admin/", include(admin.site.urls)),
+    url(r'^admin_tools/', include('admin_tools.urls')),
+
+
+
 )
 
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {
+            'document_root': settings.MEDIA_ROOT,
+        }),
+   )
