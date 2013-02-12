@@ -1,0 +1,759 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"update",
+				"update_index"
+			],
+			[
+				"query",
+				"get_queryset"
+			],
+			[
+				"Ar",
+				"ArticlDetailView"
+			],
+			[
+				"db",
+				"db_name"
+			],
+			[
+				"dump",
+				"dump_loc"
+			],
+			[
+				"dump_",
+				"dump_path"
+			],
+			[
+				"Object",
+				"ObjectDoesNotExist"
+			],
+			[
+				"dest",
+				"dest_dir"
+			],
+			[
+				"source",
+				"source_dir"
+			],
+			[
+				"virtual",
+				"virtualenvs"
+			],
+			[
+				"mode",
+				"mode_sudo"
+			],
+			[
+				"cre",
+				"create_hosting_dir"
+			],
+			[
+				"python",
+				"python-pip"
+			],
+			[
+				"N",
+				"None"
+			],
+			[
+				"public",
+				"public_gateway_ip"
+			],
+			[
+				"supervisor",
+				"supervisorctl"
+			],
+			[
+				"package",
+				"package_ensure"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"i",
+				"ipdb	ipdb debug tool"
+			],
+			[
+				"Wor",
+				"WorkShopAdmin"
+			],
+			[
+				"Work",
+				"WorkShopImage"
+			],
+			[
+				"temp",
+				"tempfile"
+			],
+			[
+				"summary",
+				"summary_html"
+			],
+			[
+				"Sec",
+				"SectionLListView"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "# -*- coding: utf-8 -*-\n# Django settings for zero project.\n\nfrom os.path import abspath, basename, dirname, join, normpath\nfrom sys import path\n\nDJANGO_ROOT = dirname(dirname(abspath(__file__)))\npath.append(DJANGO_ROOT)\npath.append(join(DJANGO_ROOT, \"apps\"))\n\nDEBUG = True\nTEMPLATE_DEBUG = DEBUG\n\n# tells Pinax to serve media through the staticfiles app.\nSERVE_MEDIA = DEBUG\n\n# django-compressor is turned off by default due to deployment overhead for\n# most users. See <URL> for more information\n\n\nADMINS = [\n    # (\"Your Name\", \"your_email@domain.com\"),\n]\n\nMANAGERS = ADMINS\n\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": \"\",\n    }\n}\n\n# Local time zone for this installation. Choices can be found here:\n# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name\n# although not all choices may be available on all operating systems.\n# If running in a Windows environment this must be set to the same as your\n# system time zone.\n\nTIME_ZONE = \"America/Port_of_Spain\"\n\n# Language code for this installation. All choices can be found here:\n# http://www.i18nguy.com/unicode/language-identifiers.html\nLANGUAGE_CODE = \"en-us\"\n\nSITE_ID = 1\n\n# If you set this to False, Django will make some optimizations so as not\n# to load the internationalization machinery.\nUSE_I18N = True\n\n# Absolute path to the directory that holds media.\n# Example: \"/home/media/media.lawrence.com/\"\nMEDIA_ROOT = join(DJANGO_ROOT, \"site_media\", \"media\")\n\n# URL that handles the media served from MEDIA_ROOT. Make sure to use a\n# trailing slash if there is a path component (optional in other cases).\n# Examples: \"http://media.lawrence.com\", \"http://example.com/media/\"\nMEDIA_URL = \"/site_media/media/\"\n\n# Absolute path to the directory that holds static files like app media.\n# Example: \"/home/media/media.lawrence.com/apps/\"\nSTATIC_ROOT = join(DJANGO_ROOT, \"site_media\", \"static\")\n\n# URL that handles the static files like app media.\n# Example: \"http://media.lawrence.com\"\nSTATIC_URL = \"/site_media/static/\"\n\n# Additional directories which hold static files\nSTATICFILES_DIRS = [\n    join(DJANGO_ROOT, \"static\"),\n]\n\nSTATICFILES_FINDERS = (\n    'django.contrib.staticfiles.finders.FileSystemFinder',\n    'django.contrib.staticfiles.finders.AppDirectoriesFinder',\n)\n\n\n# Make this unique, and don't share it with anybody.\nSECRET_KEY = \"##!-@lj^&6m_)2v&730o!nks=94cp&m*^_$11kz@wcize24+*)\"\n\n# List of callables that know how to import templates from various sources.\nTEMPLATE_LOADERS = [\n    \"django.template.loaders.filesystem.Loader\",\n    \"django.template.loaders.app_directories.Loader\",\n]\n\nMIDDLEWARE_CLASSES = [\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n]\n\nROOT_URLCONF = \"civ_monitor.urls\"\n\nTEMPLATE_DIRS = [\n    join(DJANGO_ROOT, \"templates\"),\n]\n\nTEMPLATE_CONTEXT_PROCESSORS = [\n    \"django.contrib.auth.context_processors.auth\",\n    \"django.core.context_processors.debug\",\n    \"django.core.context_processors.i18n\",\n    \"django.core.context_processors.media\",\n    \"django.core.context_processors.request\",\n    \"django.contrib.messages.context_processors.messages\",\n    'django.core.context_processors.static',\n    'django.core.context_processors.tz',\n    'utils.context_processors.site_settings'\n]\n\nDJANGO_APPS = [\n    # Django\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    'django.contrib.staticfiles',\n]\n\nTHIRD_PARTY_APPS = [\n    # theme\n    'south',\n    \"pinax_theme_foundation\",\n\n]\n\nLOCAL_APPS = [\n    'utils',\n    'publications',\n    \n]\n\nINSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS\n\nFIXTURE_DIRS = [\n    join(DJANGO_ROOT, \"fixtures\"),\n]\n\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'filters': {\n        'require_debug_false': {\n            '()': 'django.utils.log.RequireDebugFalse'\n        }\n    },\n    'handlers': {\n        'mail_admins': {\n            'level': 'ERROR',\n            'filters': ['require_debug_false'],\n            'class': 'django.utils.log.AdminEmailHandler'\n        }\n    },\n    'loggers': {\n        'django.request': {\n            'handlers': ['mail_admins'],\n            'level': 'ERROR',\n            'propagate': True,\n        },\n    }\n}\n",
+			"file": "settings/base.py",
+			"file_size": 4597,
+			"file_write_time": 1359846749000000,
+			"settings":
+			{
+				"buffer_size": 4622,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings/local.py",
+			"settings":
+			{
+				"buffer_size": 1695,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "settings/dev_chris.py",
+			"settings":
+			{
+				"buffer_size": 248,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "urls.py",
+			"settings":
+			{
+				"buffer_size": 493,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/_account_bar.html",
+			"settings":
+			{
+				"buffer_size": 790,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/theme_base.html",
+			"settings":
+			{
+				"buffer_size": 5244,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/utils/context_processors.py",
+			"settings":
+			{
+				"buffer_size": 281,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor/requirements/_base.txt",
+			"settings":
+			{
+				"buffer_size": 168,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/utils/views.py",
+			"settings":
+			{
+				"buffer_size": 537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/publications/models.py",
+			"settings":
+			{
+				"buffer_size": 1035,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"p",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"pep",
+				"User: Python PEP8 Autoformat"
+			],
+			[
+				"Pack",
+				"Package Control: List Packages"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Package Control: Discover Packages"
+			],
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"rst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 449.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/Python PEP8 Autoformat/pep8_autoformat.sublime-settings",
+		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/User/pep8_autoformat.sublime-settings",
+		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/admin/site_base.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/fabfile.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/deploy/nginx_prod.conf",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/glossary/term_detail.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/_navbar.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/_sitemap.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/banner_base.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/deploy/local_settings_tmpl.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/models.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/_deploy.cfg",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/search/includes/_flatpage.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/search/includes/_article.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/contact_us/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/search/includes/_workshop.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/search/includes/_glossary.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/models.py",
+		"/Users/christopherclarke/Dropbox/Development/django-glossary/glossary/models.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/utils/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/contact_us/forms.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/contact_us/views.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/static/css/site_styles.css",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/fixtures/initial_data.json",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/managers.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/markdown_parser.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/forms.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/views.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/settings.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/scripts/fixnews_dates.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/utils/markdown_parser.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/utils/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/search/search.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/markitup/preview.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/flatpages/default.html.orig",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/flatpages/default.html",
+		"/Users/christopherclarke/Dropbox/Development/django-glossary/MANIFEST.in",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/static/humans.txt",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/local_settings.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/utils/models.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/static/robots.txt",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/site_base.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/deploy/nginx.conf",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/national-hiv.sublime-project",
+		"/Users/christopherclarke/Dropbox/Development/chrisdev_ops/config_files/network_interfaces.tmpl",
+		"/Users/christopherclarke/Dropbox/Development/chrisdev_ops/xibalba_db",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/glossary/_letter_index.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/500.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/requirements/project.txt",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/search_sites.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/_topbar.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/workshops/root.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/templatetags/news_tags.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/workshops/workshop_detail.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/workshops/workshop_list.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/views.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/__init__.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/root.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/article_list.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/requirements/base.txt",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/article_detail.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/workshops/tests.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/news/feeds.py",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/section_list.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/section_detail.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/apps/photos/templatetags/photo_tags.py",
+		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/article_archive_year.html",
+		"/Users/christopherclarke/Dropbox/Development/national_hiv_site/templates/news/article_archive_month.html"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"debug_mode",
+			"list",
+			"mainContent",
+			"li",
+			"aero",
+			"25",
+			"cusine",
+			"apt get",
+			"text_normalize",
+			"url",
+			"settings",
+			" \n",
+			"article",
+			"photo",
+			"post",
+			" .",
+			"post"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 10,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "settings/base.py",
+					"settings":
+					{
+						"buffer_size": 4622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3948,
+								3948
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 17.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "settings/local.py",
+					"settings":
+					{
+						"buffer_size": 1695,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								873,
+								873
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 290.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "settings/dev_chris.py",
+					"settings":
+					{
+						"buffer_size": 248,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								21,
+								21
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "urls.py",
+					"settings":
+					{
+						"buffer_size": 493,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								345,
+								345
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/_account_bar.html",
+					"settings":
+					{
+						"buffer_size": 790,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16,
+								16
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/theme_base.html",
+					"settings":
+					{
+						"buffer_size": 5244,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								631,
+								631
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 173.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "apps/utils/context_processors.py",
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor/requirements/_base.txt",
+					"settings":
+					{
+						"buffer_size": 168,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								168
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "apps/utils/views.py",
+					"settings":
+					{
+						"buffer_size": 537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								332,
+								332
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "apps/publications/models.py",
+					"settings":
+					{
+						"buffer_size": 1035,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1035,
+								1035
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.948132780083,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 324.0,
+	"status_bar_visible": true
+}
