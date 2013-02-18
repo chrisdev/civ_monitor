@@ -32,3 +32,48 @@ div.breadcrumbs {
 div.breadcrumbs a {
     display: inline;
 }
+
+
+.link-tools {
+    font-size: 10px;
+    font-weight: bold;
+    font-family: Arial,Helvetica,sans-serif;
+    padding-left: 0;
+    float: right;
+    position: relative;
+    /*margin-top: -2.4em;
+    margin-bottom: -2em;*/
+}
+
+
+
+.link-tools a:link, .link-tools a:visited {
+    display: block;
+    float: left;
+    color: white;
+    padding: .1em 14px .1em 8px;
+    height: 14px;
+    background: #999 url(../images/tool-right.gif) 100% 0 no-repeat;
+}
+
+.link-tools a:hover, .link-tools li:hover a {
+    background: #5b80b2 url(../images/tool-right_over.gif) 100% 0 no-repeat;
+}
+
+.link-tools a.viewsitelink, .link-tools a.golink {
+    background: #999 url(../images/tooltag-arrowright.gif) top right no-repeat;
+    padding-right: 28px;
+}
+
+.link-tools a.viewsitelink:hover, .link-tools a.golink:hover {
+    background: #5b80b2 url(../images/tooltag-arrowright_over.gif) top right no-repeat;
+}
+
+.link-tools a.addlink {
+    background: #999 url(../images/tooltag-add.gif) top right no-repeat;
+    padding-right: 28px;
+}
+
+.link-tools a.addlink:hover {
+    background: #5b80b2 url(../images/tooltag-add_over.gif) top right no-repeat;
+}

@@ -17,33 +17,6 @@ from admin_tools.dashboard import modules, Dashboard, AppIndexDashboard
 from admin_tools.utils import get_admin_site_name
 
 
-
-class MyDashboard(Dashboard):
-
-    # we want a 3 columns layout
-    columns = 3
-
-    def __init__(self, **kwargs):
-
-        # append an app list module for "Applications"
-        self.children.append(modules.AppList(
-            title=_('Applications'),
-            exclude=('django.contrib.*',),
-        ))
-
-        # append an app list module for "Administration"
-        self.children.append(modules.AppList(
-            title=_('Administration'),
-            models=('django.contrib.*',),
-        ))
-
-        # append a recent actions module
-        self.children.append(modules.RecentActions(
-            title=_('Recent Actions'),
-            limit=5
-        ))
-
-
 class CIVIndexDashboard(Dashboard):
     """
     Custom index dashboard for civ_monitor.
@@ -117,4 +90,4 @@ class CIVAppIndexDashboard(AppIndexDashboard):
         """
         Use this method if you need to access the request context.
         """
-        return super(CustomAppIndexDashboard, self).init_with_context(context)
+        return super(CIVAppIndexDashboard, self).init_with_context(context)

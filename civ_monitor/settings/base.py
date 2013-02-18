@@ -141,6 +141,10 @@ THIRD_PARTY_APPS = [
     "pinax_theme_foundation",
     "django_extensions",
     'django_countries',
+    'filer',
+    'easy_thumbnails',
+    'model_utils',
+
 
 ]
 
@@ -164,6 +168,19 @@ ADMIN_TOOLS_APP_INDEX_DASHBOARD = 'civ_monitor.dashboard.CIVAppIndexDashboard'
 
 
 ###############################
+################# THUMBNAIL ################
+
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
+)
+
+############################################
+
+
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,

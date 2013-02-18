@@ -4,6 +4,150 @@
 		"selected_items":
 		[
 			[
+				"FundV",
+				"FundVolumeDataAdmin"
+			],
+			[
+				"Fun",
+				"FundVolumeData"
+			],
+			[
+				"Fund",
+				"FundOfficer"
+			],
+			[
+				"Off",
+				"OfficerDirectorAdmin"
+			],
+			[
+				"IssuerOf",
+				"IssuerOfficerInline"
+			],
+			[
+				"Mod",
+				"ModelAdmin"
+			],
+			[
+				"core_",
+				"core_fund"
+			],
+			[
+				"Service",
+				"ServiceManager"
+			],
+			[
+				"dict",
+				"dictfetchall"
+			],
+			[
+				"Officer",
+				"OfficerDirector"
+			],
+			[
+				"country",
+				"country_id"
+			],
+			[
+				"add",
+				"address_2"
+			],
+			[
+				"Servic",
+				"ServiceManager"
+			],
+			[
+				"fi",
+				"fields"
+			],
+			[
+				"model",
+				"model_utils"
+			],
+			[
+				"mt",
+				"mtext	TextField (mtext)"
+			],
+			[
+				"T",
+				"True"
+			],
+			[
+				"re",
+				"register"
+			],
+			[
+				"Mo",
+				"ModelAdmin"
+			],
+			[
+				"fund",
+				"fund_scheme"
+			],
+			[
+				"Leg",
+				"LegalStatus"
+			],
+			[
+				"core_fund",
+				"core_fundclassification"
+			],
+			[
+				"core",
+				"core_issuer"
+			],
+			[
+				"mx",
+				"max_length"
+			],
+			[
+				"Le",
+				"LegalStatus"
+			],
+			[
+				"me",
+				"Meta"
+			],
+			[
+				"stau",
+				"status"
+			],
+			[
+				"mb",
+				"mnullbool	NullBooleanField (mnullbool)"
+			],
+			[
+				"Coun",
+				"CountryField"
+			],
+			[
+				"C",
+				"Currency"
+			],
+			[
+				"Currency",
+				"CurrencyAdmin"
+			],
+			[
+				"data",
+				"data_collection_period"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"publ",
+				"publication_date_id"
+			],
+			[
+				"date",
+				"date_stamp"
+			],
+			[
+				"mi",
+				"mint	IntegerField (mint)"
+			],
+			[
 				"update",
 				"update_index"
 			],
@@ -104,13 +248,48 @@
 	"buffers":
 	[
 		{
-			"contents": "# -*- coding: utf-8 -*-\n# Django settings for zero project.\n\nfrom os.path import abspath, basename, dirname, join, normpath\nfrom sys import path\n\nDJANGO_ROOT = dirname(dirname(abspath(__file__)))\npath.append(DJANGO_ROOT)\npath.append(join(DJANGO_ROOT, \"apps\"))\n\nDEBUG = True\nTEMPLATE_DEBUG = DEBUG\n\n# tells Pinax to serve media through the staticfiles app.\nSERVE_MEDIA = DEBUG\n\n# django-compressor is turned off by default due to deployment overhead for\n# most users. See <URL> for more information\n\n\nADMINS = [\n    # (\"Your Name\", \"your_email@domain.com\"),\n]\n\nMANAGERS = ADMINS\n\nDATABASES = {\n    \"default\": {\n        \"ENGINE\": \"django.db.backends.sqlite3\",\n        \"NAME\": \"\",\n        \"USER\": \"\",\n        \"PASSWORD\": \"\",\n        \"HOST\": \"\",\n        \"PORT\": \"\",\n    }\n}\n\n# Local time zone for this installation. Choices can be found here:\n# http://en.wikipedia.org/wiki/List_of_tz_zones_by_name\n# although not all choices may be available on all operating systems.\n# If running in a Windows environment this must be set to the same as your\n# system time zone.\n\nTIME_ZONE = \"America/Port_of_Spain\"\n\n# Language code for this installation. All choices can be found here:\n# http://www.i18nguy.com/unicode/language-identifiers.html\nLANGUAGE_CODE = \"en-us\"\n\nSITE_ID = 1\n\n# If you set this to False, Django will make some optimizations so as not\n# to load the internationalization machinery.\nUSE_I18N = True\n\n# Absolute path to the directory that holds media.\n# Example: \"/home/media/media.lawrence.com/\"\nMEDIA_ROOT = join(DJANGO_ROOT, \"site_media\", \"media\")\n\n# URL that handles the media served from MEDIA_ROOT. Make sure to use a\n# trailing slash if there is a path component (optional in other cases).\n# Examples: \"http://media.lawrence.com\", \"http://example.com/media/\"\nMEDIA_URL = \"/site_media/media/\"\n\n# Absolute path to the directory that holds static files like app media.\n# Example: \"/home/media/media.lawrence.com/apps/\"\nSTATIC_ROOT = join(DJANGO_ROOT, \"site_media\", \"static\")\n\n# URL that handles the static files like app media.\n# Example: \"http://media.lawrence.com\"\nSTATIC_URL = \"/site_media/static/\"\n\n# Additional directories which hold static files\nSTATICFILES_DIRS = [\n    join(DJANGO_ROOT, \"static\"),\n]\n\nSTATICFILES_FINDERS = (\n    'django.contrib.staticfiles.finders.FileSystemFinder',\n    'django.contrib.staticfiles.finders.AppDirectoriesFinder',\n)\n\n\n# Make this unique, and don't share it with anybody.\nSECRET_KEY = \"##!-@lj^&6m_)2v&730o!nks=94cp&m*^_$11kz@wcize24+*)\"\n\n# List of callables that know how to import templates from various sources.\nTEMPLATE_LOADERS = [\n    \"django.template.loaders.filesystem.Loader\",\n    \"django.template.loaders.app_directories.Loader\",\n]\n\nMIDDLEWARE_CLASSES = [\n    \"django.middleware.common.CommonMiddleware\",\n    \"django.contrib.sessions.middleware.SessionMiddleware\",\n    \"django.middleware.csrf.CsrfViewMiddleware\",\n    \"django.contrib.auth.middleware.AuthenticationMiddleware\",\n    \"django.contrib.messages.middleware.MessageMiddleware\",\n]\n\nROOT_URLCONF = \"civ_monitor.urls\"\n\nTEMPLATE_DIRS = [\n    join(DJANGO_ROOT, \"templates\"),\n]\n\nTEMPLATE_CONTEXT_PROCESSORS = [\n    \"django.contrib.auth.context_processors.auth\",\n    \"django.core.context_processors.debug\",\n    \"django.core.context_processors.i18n\",\n    \"django.core.context_processors.media\",\n    \"django.core.context_processors.request\",\n    \"django.contrib.messages.context_processors.messages\",\n    'django.core.context_processors.static',\n    'django.core.context_processors.tz',\n    'utils.context_processors.site_settings'\n]\n\nDJANGO_APPS = [\n    # Django\n    \"django.contrib.admin\",\n    \"django.contrib.auth\",\n    \"django.contrib.contenttypes\",\n    \"django.contrib.sessions\",\n    \"django.contrib.sites\",\n    \"django.contrib.messages\",\n    \"django.contrib.humanize\",\n    'django.contrib.staticfiles',\n]\n\nTHIRD_PARTY_APPS = [\n    # theme\n    'south',\n    \"pinax_theme_foundation\",\n\n]\n\nLOCAL_APPS = [\n    'utils',\n    'publications',\n    \n]\n\nINSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS\n\nFIXTURE_DIRS = [\n    join(DJANGO_ROOT, \"fixtures\"),\n]\n\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'filters': {\n        'require_debug_false': {\n            '()': 'django.utils.log.RequireDebugFalse'\n        }\n    },\n    'handlers': {\n        'mail_admins': {\n            'level': 'ERROR',\n            'filters': ['require_debug_false'],\n            'class': 'django.utils.log.AdminEmailHandler'\n        }\n    },\n    'loggers': {\n        'django.request': {\n            'handlers': ['mail_admins'],\n            'level': 'ERROR',\n            'propagate': True,\n        },\n    }\n}\n",
-			"file": "settings/base.py",
-			"file_size": 4597,
-			"file_write_time": 1359846749000000,
+			"file": "apps/funds/models/funds.py",
 			"settings":
 			{
-				"buffer_size": 4622,
+				"buffer_size": 3597,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django.db import models\nfrom .funds import Fund, Issuer\nfrom publications.models import Monthly\nfrom django.contrib.auth.models import User\nfrom model_utils.models import TimeStampedModel\n\n\n\nclass VolumeReportSubmission(TimeStampedModel):\n\n    issuer = models.ForeignKey(Issuer)\n    uploaded_by = models.ForeignKey(User, null=True, editable=False)\n    filepath = models.FileField(\n        upload_to='data/%Y/%b',\n        verbose_name='Upload Volume Report File',\n        help_text=('Browse your computer to select a the '\n                   'Excel file with the volume report submission:'\n                   )\n    )\n\n    data_period = models.ForeignKey(\n        Monthly,\n        limit_choices_to={'dateix__gte': '2007-12-31'}\n    )\n\n    def __unicode__(self):\n        return  '%s - %s' % (\n            self.issuer,\n            self.data_period.dateix.strftime('%Y-%b')\n        )\n\n    def get_absolute_url(self):\n        return \"data/submission/%s\" % (self.id)\n\n    def get_url(self):\n        return '<a href=\"%s\">%s</a>' % (self.filepath.url, \"View XL File\")\n    get_url.allow_tags = True\n    get_url.short_description = 'Submission'\n\n    def get_last_log(self):\n\n        ll = LoaderLog.objects.all().filter(\n            submission__id=self.id\n        ).order_by(\n            '-updated'\n        )[0]\n        return ll\n\n    def show_last_log(self):\n        try:\n            ll = LoaderLog.objects.all(\n            ).filter(\n                submission__id=self.id).order_by('-updated')[0]\n            return '<a href=\"/admin/datasub/log_detail/%s/\"><img src=\"/site_media/images/view.png\" />&nbsp;View</a>' % ll.id\n        except IndexError:\n            return \"\"\n    show_last_log.allow_tags = True\n    show_last_log.short_description = 'View Log'\n\n    class Meta:\n        verbose_name = 'Volume Report Submission'\n        verbose_name_plural = 'Upload Volume Report Submission'\n        app_label = 'funds'\n\n\nclass FundVolumeData(TimeStampedModel):\n\n    fund = models.ForeignKey(Fund, related_name='volumedata')\n    user = models.ForeignKey(User, blank=True, null=True, editable=False)\n\n    period_ending = models.ForeignKey(\n        Monthly,\n        verbose_name=\"Reporting Period\",\n        limit_choices_to={'dateix__gte': '2006-12-31'}\n    )\n    units_purchased_individuals = models.FloatField(\n        \"Individuals\",\n        blank=True,\n        null=True\n    )\n    units_purchased_institutions = models.FloatField(\n        \"Instutions\",\n        blank=True,\n        null=True\n    )\n    units_sold_agents = models.FloatField(\n        verbose_name=\"Agents\",\n        blank=True,\n        null=True\n    )\n\n    units_sold_inhouse = models.FloatField(\n        verbose_name=\"In House\",\n        blank=True,\n        null=True\n    )\n\n    units_redeemed_individuals = models.FloatField(\n        verbose_name=\"Individuals\",\n        blank=True,\n        null=True\n    )\n\n    units_redeemed_institutions = models.FloatField(\n        verbose_name=\"Institutions\",\n        blank=True,\n        null=True)\n\n    total_units_issued_outstanding = models.FloatField(\n        verbose_name=\"Units Issued/Outstanding\",\n        blank=True,\n        null=True\n    )\n\n    total_unit_holders = models.FloatField(\n        verbose_name=\"No. Unit holders\",\n        blank=True,\n        null=True\n    )\n\n    value_units_purchased_individuals = models.DecimalField(\n        verbose_name=\"Purchased by Individuals\",\n        max_digits=12,\n        decimal_places=2,\n        blank=True,\n        null=True\n    )\n\n    value_units_purchased_institutions = models.DecimalField(\n        verbose_name=\"Purchased by Institutions\",\n        max_digits=12,\n        decimal_places=2,\n        null=True, blank=True\n    )\n    value_unit_sales_agents = models.DecimalField(\n        verbose_name=\"Sales by Agents\",\n        max_digits=12,\n        decimal_places=2,\n        null=True,\n        blank=True\n    )\n\n    value_unit_sales_inhouse = models.DecimalField(\n        verbose_name=\"Sales In House\",\n        max_digits=12,\n        decimal_places=2,\n        null=True,\n        blank=True\n    )\n\n    value_redeemed_individuals = models.DecimalField(\n        verbose_name=\"Redeemed by individuals\",\n        max_digits=12,\n        decimal_places=2,\n        null=True,\n        blank=True\n    )\n\n    value_redeemed_institutions = models.DecimalField(\n        verbose_name=\"Redeemed by Individuals\",\n        max_digits=12,\n        decimal_places=2,\n        null=True,\n        blank=True\n    )\n\n    total_net_assets_under_management = models.DecimalField(\n        max_digits=12,\n        decimal_places=2,\n        blank=True,\n        null=True\n    )\n\n    tt_value_units_purchased_individuals = models.FloatField(\n        verbose_name=\"TT Purchased by Individuals\",\n        blank=True, null=True\n    )\n    tt_value_units_purchased_institutions = models.DecimalField(\n        verbose_name=\"TT Purchased by Institutions\",\n        null=True,\n        blank=True\n    )\n    tt_value_unit_sales_agents = models.DecimalField(\n        verbose_name=\"TT Sales by Agents\",\n        null=True,\n        blank=True\n    )\n    tt_value_unit_sales_inhouse = models.DecimalField(\n        verbose_name=\"TT Sales In House\",\n        null=True,\n        blank=True\n    )\n    tt_value_redeemed_individuals = models.DecimalField(\n        verbose_name=\"TT Redeemed by Individuals\",\n        null=True,\n        blank=True\n    )\n    tt_value_redeemed_institutions = models.DecimalField(\n        verbose_name=\"TT Redeemed by Institutions\",\n        max_digits=12,\n        decimal_places=2,\n        null=True, blank=True\n    )\n    tt_total_net_assets_under_management = models.FloatField(\n        null=True,\n        blank=True\n    )\n\n    unit_net_asset_value = models.FloatField(\n        verbose_name=\"Unit NAV\",\n        null=True,\n        blank=True\n    )\n\n    tt_value_units_purchased_individuals = models.FloatField(\n        null=True,\n        default=0.0,\n        blank=True\n    )\n    tt_value_units_purchased_institutions = models.FloatField(\n        null=True,\n        default=0.0,\n        blank=True\n    )\n    tt_value_unit_sales_agents = models.FloatField(null=True,\n                                                   default=0.0,\n                                                   blank=True\n                                                   )\n    tt_value_unit_sales_inhouse = models.FloatField(null=True,\n                                                    default=0.0,\n                                                    blank=True\n                                                    )\n    tt_value_redeemed_individuals = models.FloatField(null=True,\n                                                      default=0.0,\n                                                      blank=True\n                                                      )\n    tt_value_redeemed_institutions = models.FloatField(null=True,\n                                                       default=0.0,\n                                                       blank=True\n                                                       )\n    tt_value_redemptions = models.FloatField(\n        verbose_name=\"Redemptions ($TT)\",\n        null=True,\n        default=0.0,\n        blank=True\n    )\n\n    tt_value_sales = models.FloatField(\n        verbose_name=\"Sales ($TT)\",\n        null=True,\n        default=0.0,\n        blank=True\n    )\n\n    tt_total_net_assets_under_management = models.FloatField(\n        verbose_name=\"Assets Under Management ($TT)\",\n        null=True,\n        default=0.0,\n        blank=True\n    )\n\n    total_units_sold = models.FloatField(\n        verbose_name=\"No. Units Sold\",\n        null=True,\n        default=0.0,\n        blank=True\n    )\n\n    total_units_redeemed = models.FloatField(\n        verbose_name=\"No, Units Reedeemd\",\n        null=True,\n        default=0.0,\n        blank=True\n    )\n\n    is_estimated = models.NullBooleanField(\n        verbose_name='Values Have been Estimated',\n        blank=True,\n        default=False\n    )\n\n    is_valid = models.NullBooleanField(\n        verbose_name='Values Checked and Passed',\n        blank=True,\n        default=False\n    )\n\n    class Meta:\n        verbose_name_plural = \"Volume Data\"\n        order_with_respect_to = 'period_ending'\n        unique_together = ('fund', 'period_ending')\n        app_label = 'funds'\n\n    def __unicode__(self):\n        return \"%s-%s\" % (self.fund, self.period_ending)\n",
+			"file": "apps/funds/models/fund_data.py",
+			"file_size": 8348,
+			"file_write_time": 1360917770000000,
+			"settings":
+			{
+				"buffer_size": 8350,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/funds/models/fund_management.py",
+			"settings":
+			{
+				"buffer_size": 4012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "apps/funds/models/__init__.py",
+			"settings":
+			{
+				"buffer_size": 77,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "from django.contrib import admin\nfrom .models import (InternationalClassification, LegalStatus,\n                     FundScheme, Issuer, Fund, ActiveStatus,\n                     FundServiceManager, OfficerDirector,\n                     ServiceManager, FundOfficer, IssuerOfficer,\n                     VolumeReportSubmission, FundVolumeData\n                     )\n\nfrom django.contrib.admin import SimpleListFilter\nfrom django.contrib.humanize.templatetags.humanize import intcomma\n\nclass InternationalClassificationAdmin(admin.ModelAdmin):\n    pass\n\n\nclass OfficerDirectorAdmin(admin.ModelAdmin):\n    list_display = ('first_name', 'last_name', 'telephone', 'email',)\n    search_fields = ('first_name', 'last_name', 'email',)\n\n\nclass ServiceManagerAdmin(admin.ModelAdmin):\n    list_display = ['name', 'country', ]\n    search_fields = ['name', 'country', ]\n\n\nclass FundServiceManagerInline(admin.TabularInline):\n    model = FundServiceManager\n    extra = 3\n\n\nclass FundOfficerInLine(admin.TabularInline):\n    model = FundOfficer\n    extra = 3\n\n\nclass IssuerOfficerInline(admin.TabularInline):\n    model = IssuerOfficer\n    extra = 3\n\n\nclass FundServiceManagerAdmin(admin.ModelAdmin):\n    list_display = ('fund', 'position', 'active',)\n    search_fields = ('position', 'fund',)\n\n\nclass IssuerAdmin(admin.ModelAdmin):\n\n    list_display = ('name', 'symbol', 'fund_count', 'show_funds')\n    list_filter = ('is_local_entity',)\n    search_fields = ('symbol', 'name',)\n    fieldsets = (\n        (None, {'fields': ('name', 'symbol', 'is_local_entity',\n                'address_1', 'address_2', 'country', 'fax', 'telephone')\n                }\n         ),\n        ('Optional Data', {'fields': ('email', 'website'),\n                           'classes': ('collapse',)\n                           }\n         ),\n    )\n\n    inlines = [\n        IssuerOfficerInline\n    ]\n\n    def fund_count(self, obj):\n        return obj.funds.count()\n    fund_count.short_description = 'No. Funds'\n\n    def show_funds(self, obj):\n        tmpl = (\n            '<div class=\"link-tools\">'\n            '<a href=\"/admin/core/fund/?issuer__id__exact=%s\" class=\"golink\">'\n            'Show Funds</a>'\n            '</div>'\n        )\n        return tmpl % (obj.id)\n\n    show_funds.allow_tags = True\n    show_funds.short_description = ''\n\n\nclass LocalCurrencyFilter(SimpleListFilter):\n    title = 'currency denomination'\n\n    parameter_name = 'currency'\n\n    def lookups(self, request, model_admin):\n\n        return (\n            ('local', 'Local currency'),\n            ('foreign', 'Foreign currency')\n        )\n\n    def queryset(self, request, queryset):\n        if self.value() == 'local':\n            return queryset.filter(currency__code='TTD')\n        if self.value() == 'foreign':\n            return queryset.exclude(currency__code='TTD')\n\n\nclass FundAdmin(admin.ModelAdmin):\n    list_display = (\n        'symbol',\n        'description',\n        'current_activity_status',\n        'issuer',\n        'last_data_submission',\n        'show_volume_reports'\n    )\n\n    list_filter = ('fund_scheme', 'issuer', LocalCurrencyFilter)\n\n    search_fields = (\n        'issuer__name', 'issuer__symbol', 'symbol',\n        'description',\n    )\n\n    ordering = ['symbol']\n\n    def current_activity_status(self, obj):\n        return obj.get_activity_status()\n\n    current_activity_status.short_description = 'Active'\n    current_activity_status.boolean = True\n\n    def show_volume_reports(self, obj):\n        tmpl = (\n            '<div class=\"link-tools\">'\n            '<a href=\"/admin/funds/fundvolumedata/?fund__id__exact=%s\" '\n            'class=\"golink\">'\n            'Show Volume Reports</a>'\n            '</div>'\n        )\n\n        return tmpl % (obj.id)\n\n    show_volume_reports.allow_tags = True\n    show_volume_reports.short_description = ''\n\n    def last_data_submission(self, obj):\n        try:\n            obs = obj.volumedata.all().order_by('-period_ending')[0]\n            return \"{} [by {} on {}] )\".format(\n                    obs.period_ending.dateix.strftime('%Y-%m'),\n                    obs.user,\n                    obs.modified.strftime('%Y-%m-%d: %H')\n\n                    )\n        except IndexError:\n            return '-'\n\n    last_data_submission.short_description = 'last Submission'\n\n    def last_net_assets(self, obj):\n        return '-'\n        # pd=last_valid_pubdate()\n        # try:\n        #     vd=self.fundvolumedata_set.filter(\n        #         period_ending__dateix__lte=pd.dateix).order_by('-period_ending')[0]\n        #     return vd.tt_total_net_assets_under_management\n        # except IndexError:\n        #     return None\n\n    def last_nav(self, obj):\n        return '-'\n        # pd=last_valid_pubdate()\n        # try:\n        #     vd=self.fundvolumedata_set.filter(\n        #         period_ending__dateix__lte=pd.dateix).order_by('-period_ending')[0]\n        #     vd=self.fundvolumedata_set.all().order_by('-period_ending')[0]\n        #     return vd.unit_net_asset_value\n        # except IndexError:\n        #     return None\n\n    inlines = [\n        FundServiceManagerInline,\n        FundOfficerInLine\n    ]\n\n\nclass FundVolumeDataAdmin(admin.ModelAdmin):\n\n\n    list_display = [\n        'get_fund_symbol',\n        'period_ending',\n        'tt_net_assets_under_man_fmt',\n        'tt_value_sales_fmt',\n        'tt_value_redemptions_fmt',\n        'unit_net_asset_value',\n    ]\n\n    search_fields = ['fund__symbol','fund__issuer__symbol',\n                     'fund__issuer__name',\n                     'period_ending__dateix']\n    fieldsets = (\n        (None, {'fields': (\n            'fund',\n            'period_ending'\n            )}\n        ),\n        ('Volume Data:', {\n                'classes':('wide','extrapretty'),\n                'fields':(\n                    'total_units_sold',\n                    'total_units_redeemed',\n                    'total_units_issued_outstanding',\n                    'total_unit_holders',\n                    'tt_value_redemptions',\n                    'tt_value_sales',\n                    'unit_net_asset_value',\n                    'tt_total_net_assets_under_management',\n                    'is_estimated',\n                    'is_valid'\n                ),\n            }\n        )\n    )\n\n    def get_fund_symbol(self, obj):\n        return obj.fund.symbol\n\n    get_fund_symbol.short_description = 'Fund'\n\n    def tt_net_assets_under_man_fmt(self, obj):\n        return '-' if obj is None else intcomma(\n            round(obj.tt_total_net_assets_under_management,2)\n        )\n    tt_net_assets_under_man_fmt.short_description='Assets Under Management'\n\n    def tt_value_sales_fmt(self, obj):\n        return '-' if obj is None else intcomma(\n            round(obj.tt_value_sales,2)\n        )\n    tt_value_sales_fmt.short_description='Sales'\n\n    def tt_value_redemptions_fmt(self, obj):\n        return '-' if obj is None else intcomma(\n            round(obj.tt_value_redemptions,2)\n        )\n    tt_value_redemptions_fmt.short_description='Redemptions'\n\n    def save_model(self, request, obj, form, change):\n        obj.user = request.user\n        obj.save()\n\n\nadmin.site.register(InternationalClassification,\n                    InternationalClassificationAdmin)\nadmin.site.register(Issuer, IssuerAdmin)\nadmin.site.register(Fund, FundAdmin)\nadmin.site.register(OfficerDirector, OfficerDirectorAdmin)\nadmin.site.register(ServiceManager, ServiceManagerAdmin)\nadmin.site.register(FundVolumeData, FundVolumeDataAdmin)\n\n",
+			"file": "apps/funds/admin.py",
+			"file_size": 7454,
+			"file_write_time": 1360939136000000,
+			"settings":
+			{
+				"buffer_size": 7455,
 				"line_ending": "Unix"
 			}
 		},
@@ -118,78 +297,23 @@
 			"file": "settings/local.py",
 			"settings":
 			{
-				"buffer_size": 1695,
+				"buffer_size": 1762,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "settings/dev_chris.py",
+			"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/datasub/loader.py",
 			"settings":
 			{
-				"buffer_size": 248,
+				"buffer_size": 6842,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "urls.py",
+			"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/core/models.py",
 			"settings":
 			{
-				"buffer_size": 493,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/_account_bar.html",
-			"settings":
-			{
-				"buffer_size": 790,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/theme_base.html",
-			"settings":
-			{
-				"buffer_size": 5244,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "apps/utils/context_processors.py",
-			"settings":
-			{
-				"buffer_size": 281,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor/requirements/_base.txt",
-			"settings":
-			{
-				"buffer_size": 168,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "apps/utils/views.py",
-			"settings":
-			{
-				"buffer_size": 537,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "apps/publications/models.py",
-			"settings":
-			{
-				"buffer_size": 1035,
+				"buffer_size": 40979,
 				"line_ending": "Unix"
 			}
 		}
@@ -201,20 +325,28 @@
 		"selected_items":
 		[
 			[
+				"pac",
+				"Package Control: Remove Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"Ins",
+				"Package Control: Install Package"
+			],
+			[
 				"p",
 				"Package Control: Upgrade Package"
 			],
 			[
 				"pack",
 				"Package Control: Install Package"
-			],
-			[
-				"pa",
-				"Package Control: Discover Packages"
-			],
-			[
-				"pac",
-				"Package Control: Discover Packages"
 			],
 			[
 				"pep",
@@ -239,17 +371,13 @@
 			[
 				"rst",
 				"Package Control: Install Package"
-			],
-			[
-				"ins",
-				"Package Control: Install Package"
 			]
 		],
 		"width": 449.0
 	},
 	"console":
 	{
-		"height": 125.0
+		"height": 460.0
 	},
 	"distraction_free":
 	{
@@ -262,6 +390,33 @@
 	},
 	"file_history":
 	[
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/models/__init__.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/scripts/migrate_fund_people.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/core/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/core/models.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/settings/base.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/urls.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/settings/local.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/menu.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/dashboard.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/static/admin_tools/css/theming.css",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/requirements/_base.txt",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/publications/scripts/migrate_periods.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/publications/scripts/migrate_pubdata.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/publications/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/scripts/migrate_basic_fund_data.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/scripts/funds.sql",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/funds/funds.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/utils/scripts/migrate_currency.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/utils/admin.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/utils/models.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/publications/models.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/settings/dev_chris.py",
+		"/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/_account_bar.html",
+		"/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/theme_base.html",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/utils/context_processors.py",
+		"/Users/christopherclarke/Dropbox/Development/civ_monitor/civ_monitor/apps/utils/views.py",
 		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/Python PEP8 Autoformat/pep8_autoformat.sublime-settings",
 		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/User/pep8_autoformat.sublime-settings",
 		"/Users/christopherclarke/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
@@ -340,7 +495,7 @@
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 88.0
 	},
 	"find_in_files":
 	{
@@ -354,6 +509,39 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"  ",
+			"')\n",
+			"tt_value_redeemed_individuals",
+			"positiion",
+			"first_name",
+			"OfficerDirector",
+			"row",
+			")\n",
+			"fax",
+			"first_name",
+			"address_1",
+			"ServiceManager",
+			"InternationalClassification",
+			" InternationalClassifica",
+			"FundScheme",
+			"LegalStatus",
+			"img",
+			"object",
+			"yourproject",
+			"'\n",
+			"emal",
+			"legacy_id",
+			"notes",
+			"open_ended",
+			"legal",
+			"fund_classification",
+			"registration_date",
+			"fund_scheme",
+			"currency",
+			"country",
+			"description",
+			"symbol",
+			"issuer",
 			"debug_mode",
 			"list",
 			"mainContent",
@@ -388,23 +576,23 @@
 	"groups":
 	[
 		{
-			"selected": 10,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "settings/base.py",
+					"file": "apps/funds/models/funds.py",
 					"settings":
 					{
-						"buffer_size": 4622,
+						"buffer_size": 3597,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3948,
-								3948
+								105,
+								148
 							]
 						],
 						"settings":
@@ -414,25 +602,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 17.0,
+						"translation.y": 982.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "settings/local.py",
+					"file": "apps/funds/models/fund_data.py",
 					"settings":
 					{
-						"buffer_size": 1695,
+						"buffer_size": 8350,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								873,
-								873
+								196,
+								196
 							]
 						],
 						"settings":
@@ -440,32 +628,6 @@
 							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 290.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "settings/dev_chris.py",
-					"settings":
-					{
-						"buffer_size": 248,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								21,
-								21
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -474,19 +636,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "urls.py",
+					"buffer": 2,
+					"file": "apps/funds/models/fund_management.py",
 					"settings":
 					{
-						"buffer_size": 493,
+						"buffer_size": 4012,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								345,
-								345
+								2440,
+								2440
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 332.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "apps/funds/models/__init__.py",
+					"settings":
+					{
+						"buffer_size": 77,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								76,
+								76
 							]
 						],
 						"settings":
@@ -501,62 +692,72 @@
 				},
 				{
 					"buffer": 4,
-					"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/_account_bar.html",
+					"file": "apps/funds/admin.py",
 					"settings":
 					{
-						"buffer_size": 790,
+						"buffer_size": 7455,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								16,
-								16
+								7454,
+								7454
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 5.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 5,
-					"file": "/Users/christopherclarke/Dropbox/Development/pinax-theme-foundation/pinax_theme_foundation/templates/theme_base.html",
+					"file": "settings/local.py",
 					"settings":
 					{
-						"buffer_size": 5244,
+						"buffer_size": 1762,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								631,
-								631
+								1426,
+								1426
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 173.0,
+						"translation.y": 163.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 6,
+					"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/datasub/loader.py",
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 6842,
 						"regions":
 						{
 						},
@@ -569,125 +770,44 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 452.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 7,
-					"file": "apps/utils/context_processors.py",
+					"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor_legacy/core/models.py",
 					"settings":
 					{
-						"buffer_size": 281,
+						"buffer_size": 40979,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								209,
-								209
+								15823,
+								15879
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/Users/christopherclarke/Dropbox/Development/civ_monitor/requirements/_base.txt",
-					"settings":
-					{
-						"buffer_size": 168,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								168,
-								168
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "apps/utils/views.py",
-					"settings":
-					{
-						"buffer_size": 537,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								332,
-								332
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "apps/publications/models.py",
-					"settings":
-					{
-						"buffer_size": 1035,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1035,
-								1035
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 4.0,
+						"translation.y": 4298.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				}
-			]
-		},
-		{
-			"sheets":
-			[
 			]
 		}
 	],
@@ -719,7 +839,7 @@
 		"cols":
 		[
 			0.0,
-			0.948132780083,
+			0.207286948123,
 			1.0
 		],
 		"rows":
@@ -729,6 +849,10 @@
 		]
 	},
 	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 26.0
+	},
 	"replace":
 	{
 		"height": 0.0
@@ -754,6 +878,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 324.0,
+	"side_bar_width": 304.0,
 	"status_bar_visible": true
 }
