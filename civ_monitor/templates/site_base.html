@@ -1,6 +1,17 @@
 {% extends "theme_base.html" %}
 
+{% block extra_head_base %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/site_styles.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/menu.css"/>
+    <!--[if IE 6]>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/ie6.css" />
+    <![endif]-->
+{% endblock %}
+
 {% block account_bar %}{% endblock %}
+{% block topbar_base %}
+	{% include "_topbar.html" %}
+{% endblock %}
 
 {% block footer %}
     {% include "_footer.html" %}
